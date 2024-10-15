@@ -1,0 +1,29 @@
+.scroll-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-content {
+  display: flex;
+  flex: 1 0 auto;
+  animation: scroll 20s linear infinite;
+}
+
+.scroll-container > .scroll-content > div {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+}
+
+

@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import HeaderSection from './components/HeaderSection';
+import HorizontalPosts from './components/SmallCardsData/HorizontalPosts';
+import Footer from './components/Footer';
+import posts from './components/SmallCardsData/CardData';
+import MiddleCard from './components/MiddleCard';
+import ChefData from './components/ChefData';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{backgroundColor: '#F3E8EE'}} className='space-y-24'>
+      <Navbar />
+      <HeaderSection />
+      <HorizontalPosts posts={posts} />
+      <MiddleCard />
+      <ChefData />
+      <Footer />
     </div>
   );
 }
